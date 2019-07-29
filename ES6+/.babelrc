@@ -1,25 +1,29 @@
 {
-    "presets": ["@babel/preset-env"],
+    "presets": [
+        "@babel/preset-env"
+    ],
     //converte o código de acordo com o ambiente em que estamos enviando. Ex:
     //o node já conhece/aceita informações do ES6+, então o babel/preset-env não converterá muita coisa;
     //em outras plataformas, o babel converterá da melhor forma possível
-    "plugins": ["@babel/plugin-proposal-object-rest-spread"],
-    //REST operator é usado quando desestruturamos um objeto, passando um atributo pra uma variável,
-    //e queremos colocar o restante dos atributos em uma outra variável. 
-    //Exemplo:
-    //const usuario = {
+    "plugins": [
+        "@babel/plugin-proposal-object-rest-spread",
+        //REST operator é usado quando desestruturamos um objeto, passando um atributo pra uma variável,
+        //e queremos colocar o restante dos atributos em uma outra variável. 
+        //Exemplo:
+        //const usuario = {
         //nome: "Gustavo",
         //idade: 25,
         //empresa: "Albert Einstein"
-    //};
-    //const {nome, ...resto} = usuario;
-
-    //SPREAD operator irá propagar o conteúdo de uma estrutura de dados para outra.
-    //Exemplo:
-    //const usuario1 = {
+        //};
+        //const {nome, ...resto} = usuario;
+        //SPREAD operator irá propagar o conteúdo de uma estrutura de dados para outra.
+        //Exemplo:
+        //const usuario1 = {
         //nome: 'Gustavo',
         //idade: 25
-    //};
-    //const usuario2 = { ...usuario1, nome:'Juliano'};
-    //aqui ele substituiu a propriedade nome para o usuario2 e trouxe as outras do usuario1.
+        //};
+        //const usuario2 = { ...usuario1, nome:'Juliano'};
+        //aqui ele substituiu a propriedade nome para o usuario2 e trouxe as outras do usuario1.
+        "@babel/plugin-transform-async-to-generator",
+    ]
 }
